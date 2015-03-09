@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>BORDES</title>
+    <meta name="description" content="Ejemplos del atributo BORDER">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="content">
+		<h1>Border Atribute</h1>
+        <p>Línea que limita la parte exterior o da importancia a cierto contenido específico. La propiedad de CSS, <span>Border</span>es una propiedad abrevieda, para establecer los valores individuales del atributo en una sola línea </p>
+
+		<h3>Syntax</h3>
+		<div class="syntaxbox">
+			<pre>
+        div {
+            border: 'length' 'style' 'color';
+        }
+            </pre>
+		</div>
+		<p>Esto aplcaría a todos los lados del elemento, ya si se desea combinar estilos, tamaños y colores, se debe utilizar <span>border-</span> y su lado específico, como veremos más adelante.</p>
+		<h3>Example</h3>
+		<div class="examplebox">
+			<p>Hi! I'm an example ;)</p>
+		</div>
+		<h2>Border-Radius</h2>
+		La propiedad <span>border-radius</span> permite a los creadores de sitios web, definir que tan redondo es o son las equinas del borde del elemento.
+		<div class="syntaxbox radius">
+			<pre>
+        .example-1 {
+            border: 1px solid green;
+            border-radius: 12px;
+        }
+        <span class="comment">/* Esto se le aplica a las 4 esquinas */</span>
+            </pre>
+        </div>
+
+        <div class="example-1"></div>
+
+        <ul>
+            <li>Si se establece un valor, este radio se aplica a las cuatro esquinas.</li>
+            <li>Si se establecen dos valores, el primero se aplica a border-top-left y border-bottom-right, la segunda se aplica a la esquina border-top-right y border-bottom-left.</li>
+            <li>Cuatro valores que aplican a la parte border-top-left, border-top-right, border-bottom-right, border-bottom-left, en ese orden.</li>
+            <li>Tres valores: el segundo valor se aplica a border-top-right y también a border-bottom-left.</li>
+        </ul>
+
+        <div class="syntaxbox examples">
+            <pre>
+        .example-2 {
+            border-radius: 12px 54px;
+        }
+        <span class="comment">/* Esto se aplicaría a border-top-left//border-bottom-right & <br>       border-top-right//border-bottom-left */</span>
+
+        .example-3 {
+            border: 1px groove black;
+            border-radius: 16em 23em 8em 12em;
+        }
+        <span class="comment">/* Esto definiria el tamaño de cada esquina, top-left | top-right | <br>       bottom-right | bottom-left */</span>
+
+        .example-4 {
+            border-radius:4px 16px 9px;
+        }
+        <span class="comment">/* El segundo valor se aplica a border-top-right y también a <br>       border-bottom-left. */</span>
+            </pre>
+        </div>
+
+        <div class="example-2"></div>
+        <div class="example-3"></div>
+        <div class="example-4"></div>
+
+        <p>También puede especificar los radios en el cual está rodeada la esquina. En otras palabras, el redondeo no tiene que ser perfectamente circular, puede ser elíptica. Esto se hace usando una barra diagonal ("/") entre dos valores.</p>
+        
+        <div class="syntaxbox ovals">
+            <pre>
+        .example-5 {
+            border-radius: 10px/30px; <span>/* horizontal radius / vertical radius */</span>
+        }
+
+        .example-6 {
+            border-radius: 30px/10px; <span>/* horizontal radius / vertical radius */</span>
+        }
+            </pre>
+        </div>
+
+        <div class="example-5"></div>
+        <div class="example-6"></div>
+
+        <h2>Border-Right</h2>
+        <p>Es una propiedad abreviada que establece los valores de border-right-color, border-right-style y border-right-width. Estas propiedades describen el borde derecho del elementos.</p>
+        <h3>Syntax</h3>
+
+        <div class="syntaxbox">
+            <pre>
+        div {
+            border-right: 'length' 'style' 'color';
+        }
+            </pre>
+        </div>
+
+        <h3>Ejemplo</h3>
+        <div class="syntaxbox right">
+            <pre>
+        .example-7 {
+            border-radius: 10px/30px; <span>/* horizontal radius / vertical radius */</span>
+        }
+            </pre>
+        </div>
+
+        <div class="example-7"></div>
+
+        <h2>Border-Style</h2>
+        <p>El border-style, propiedad de CSS, es una propiedad abreviada para establecer el estilo de línea de los cuatro lados de los bordes entre elementos.</p>
+        <ul>
+            <li>Si se establece un valor, el estilo se aplicara a los cuatro lados.</li>
+            <li>Si se establecen dos valores, el primero se aplica a border-top y border-bottom, la segunda se aplica border-right y border-left.</li>
+            <li>Cuatro valores que aplican a border-top, border-right, border-bottom, border-left, en ese orden.</li>
+            <li>Tres valores: el segundo valor se aplica a border-right y también a border-left.</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <div class="syntaxbox">
+            <pre>
+        div {
+            border-style: 'style' <span class="coment">/* {1,4} */</span>
+        }
+            </pre>
+        </div>
+
+        <h3>Estilos</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>none</td>
+                    <td>
+                        <div class="example-style none"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>hidden</td>
+                    <td>
+                        <div class="example-style hidden"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>dotted</td>
+                    <td>
+                        <div class="example-style dotted"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>dashed</td>
+                    <td>
+                        <div class="example-style dashed"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>solid</td>
+                    <td>
+                        <div class="example-style solid"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>
+                        <div class="example-style double"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>groove</td>
+                    <td>
+                        <div class="example-style grove"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ridge</td>
+                    <td>
+                        <div class="example-style ridge"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Inset</td>
+                    <td>
+                        <div class="example-style inset"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>outset</td>
+                    <td>
+                        <div class="example-style ouset"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Border-Top</h2>
+        <p>Es una propiedad abreviada que establece los valores de border-top-color, border-top-style y border-top-width. Estas propiedades describen el borde superior de los elementos.</p>
+        <h3>Syntax</h3>
+        <div class="syntaxbox">
+            <pre>
+        div {
+            border-top: 'lenght' 'style' 'color';
+        }
+            </pre>
+        </div>
+
+        <h3>Ejemplo</h3>
+
+        <div class="syntaxbox">
+            <pre>
+        .example-8 {
+            border-top: 10px groove black; 
+        }
+            </pre>
+        </div>
+
+        <div class="example-8"></div>
+
+        <h2>Border-Width</h2>
+        <p>La propiedad border-width establece el ancho del borde de una caja. Usar la propiedad abreviada de border es más conveniente.</p>
+
+        <h3>Syntax</h3>
+
+        <div class="syntaxbox">
+            <pre>
+        div {
+            border-width: 'lenght'; <span class="coment">/* {1,4} Keywords: thin | medium | thick</span>
+        }
+            </pre>
+        </div>
+
+        <h3>Ejemplos</h3>
+
+        <div class="syntaxbox">
+            <pre>
+        .example-9 {
+            border-width: 10px 8px 6px; 
+        }
+
+        .example-10 {
+            border-width: medium thin thin thick; 
+        }
+            </pre>
+        </div>
+
+        <div class="example-8"></div>
+        <div class="example-9"></div>
+    </div> <!-- END .content -->
+</body>
+</html>

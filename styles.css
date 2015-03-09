@@ -1,0 +1,53 @@
+body{
+	margin: 0;
+	font-family: 'Roboto' sans-serif;
+}
+
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.syntaxbox {
+	background-color: #DDE4E9;
+	height: 2.5em;
+    border-left: 7px solid red;
+    width: 80%;
+}
+
+.examplebox {
+	border : 2px solid red;
+	height: 5em;
+	margin-top: 10px; 
+    width: 70%;
+}
+
+.examplebox p {
+	margin: 0;
+	padding: 2em;
+	text-align: center;
+
+}
+
+.radius {
+	height: 4em;
+}
+
+.example-1 {
+	border: 1px solid green;
+	border-radius: 12px;
+	width: 15%;
+	height: 5em;
+}
+
+.examples {
+	height: 17em;
+}
+.example-style {
+	background-color: blue;
+	width: 5em;
+	height: 5em;
+}
+.ovals {
+	height: 9em;
+}
