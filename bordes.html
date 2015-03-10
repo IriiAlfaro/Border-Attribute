@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>BORDES</title>
     <meta name="description" content="Ejemplos del atributo BORDER">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'> -->
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<div class="content">
 		<h1>Border Atribute</h1>
-        <p>Línea que limita la parte exterior o da importancia a cierto contenido específico. La propiedad de CSS, <span>Border</span>es una propiedad abrevieda, para establecer los valores individuales del atributo en una sola línea </p>
+
+        <p>Línea que limita la parte exterior o da importancia a cierto contenido específico. La propiedad de CSS, <span class="important-word">Border</span> es una propiedad abrevieda, para establecer los valores individuales del atributo en una sola línea </p>
 
 		<h3>Syntax</h3>
 		<div class="syntaxbox">
@@ -21,18 +22,17 @@
         }
             </pre>
 		</div>
-		<p>Esto aplcaría a todos los lados del elemento, ya si se desea combinar estilos, tamaños y colores, se debe utilizar <span>border-</span> y su lado específico, como veremos más adelante.</p>
-		<h3>Example</h3>
-		<div class="examplebox">
-			<p>Hi! I'm an example ;)</p>
-		</div>
+		
 		<h2>Border-Radius</h2>
-		La propiedad <span>border-radius</span> permite a los creadores de sitios web, definir que tan redondo es o son las equinas del borde del elemento.
-		<div class="syntaxbox radius">
+		La propiedad <span class="important-word">border-radius</span> permite a los creadores de sitios web, definir que tan redondo es o son las equinas del borde del elemento.
+		<div class="example">
 			<pre>
         .example-1 {
-            border: 1px solid green;
-            border-radius: 12px;
+            background-color: #00DB60;
+            border-radius: 50%;
+            height: 100px;
+            margin: 0.5em 0;
+            width: 200px;
         }
         <span class="comment">/* Esto se le aplica a las 4 esquinas */</span>
             </pre>
@@ -41,27 +41,41 @@
         <div class="example-1"></div>
 
         <ul>
-            <li>Si se establece un valor, este radio se aplica a las cuatro esquinas.</li>
-            <li>Si se establecen dos valores, el primero se aplica a border-top-left y border-bottom-right, la segunda se aplica a la esquina border-top-right y border-bottom-left.</li>
-            <li>Cuatro valores que aplican a la parte border-top-left, border-top-right, border-bottom-right, border-bottom-left, en ese orden.</li>
-            <li>Tres valores: el segundo valor se aplica a border-top-right y también a border-bottom-left.</li>
+            <li>Si se establece un valor, este radio se aplica a las <span class="important-word">cuatro esquinas</span>.</li>
+            <li>Si se establecen dos valores, el primero se aplica a <span class="important-word">border-top-left</span> y <span class="important-word">border-bottom-right</span>, la segunda se aplica a la esquina <span class="important-word">border-top-right</span> y <span class="important-word">border-bottom-left</span>.</li>
+            <li>Cuatro valores que aplican a la parte <span class="important-word">border-top-left</span>, <span class="important-word">border-top-right</span>,<spa class="important-word">border-bottom-right</span>, <span class="important-word">border-bottom-left</span>, en ese orden.</li>
+            <li>Tres valores: el segundo valor se aplica a <span <span class="important-word">border-top-right</span> y también a <span class="important-word">border-bottom-left</span>.</li>
         </ul>
 
-        <div class="syntaxbox examples">
+        <div class="example">
             <pre>
         .example-2 {
+            background-color: #00DB60;
             border-radius: 12px 54px;
+            display: inline-block;
+            height: 8em;
+            margin: 1em;
+            width: 10%;
         }
         <span class="comment">/* Esto se aplicaría a border-top-left//border-bottom-right & <br>       border-top-right//border-bottom-left */</span>
 
         .example-3 {
-            border: 1px groove black;
-            border-radius: 16em 23em 8em 12em;
+            border: 20px groove #EB464C;
+            border-radius: 10px 40px 40px 10px;
+            display: inline-block;
+            height: 8em;
+            margin: 1em;
+            width: 10%;
         }
         <span class="comment">/* Esto definiria el tamaño de cada esquina, top-left | top-right | <br>       bottom-right | bottom-left */</span>
 
         .example-4 {
-            border-radius:4px 16px 9px;
+            background-color: #E56928;
+            border-radius: 4px 16px 9px;
+            display: inline-block;
+            margin: 1em;
+            height: 8em;
+            width: 10%;
         }
         <span class="comment">/* El segundo valor se aplica a border-top-right y también a <br>       border-bottom-left. */</span>
             </pre>
@@ -71,9 +85,9 @@
         <div class="example-3"></div>
         <div class="example-4"></div>
 
-        <p>También puede especificar los radios en el cual está rodeada la esquina. En otras palabras, el redondeo no tiene que ser perfectamente circular, puede ser elíptica. Esto se hace usando una barra diagonal ("/") entre dos valores.</p>
+        <p>También puede especificar los radios en el cual está rodeada la esquina. En otras palabras, el redondeo no tiene que ser perfectamente circular, puede ser <span class="important-word">elíptica</span>. Esto se hace usando una barra diagonal <span class="important-word">("/")</span> entre dos valores.</p>
         
-        <div class="syntaxbox ovals">
+        <div class="example">
             <pre>
         .example-5 {
             border-radius: 10px/30px; <span>/* horizontal radius / vertical radius */</span>
@@ -81,173 +95,217 @@
 
         .example-6 {
             border-radius: 30px/10px; <span>/* horizontal radius / vertical radius */</span>
-        }
-            </pre>
+        }   </pre>
         </div>
 
         <div class="example-5"></div>
         <div class="example-6"></div>
 
-        <h2>Border-Right</h2>
-        <p>Es una propiedad abreviada que establece los valores de border-right-color, border-right-style y border-right-width. Estas propiedades describen el borde derecho del elementos.</p>
-        <h3>Syntax</h3>
-
-        <div class="syntaxbox">
-            <pre>
-        div {
-            border-right: 'length' 'style' 'color';
-        }
-            </pre>
-        </div>
-
-        <h3>Ejemplo</h3>
-        <div class="syntaxbox right">
-            <pre>
-        .example-7 {
-            border-radius: 10px/30px; <span>/* horizontal radius / vertical radius */</span>
-        }
-            </pre>
-        </div>
-
-        <div class="example-7"></div>
-
-        <h2>Border-Style</h2>
-        <p>El border-style, propiedad de CSS, es una propiedad abreviada para establecer el estilo de línea de los cuatro lados de los bordes entre elementos.</p>
+        <p>Lo soporta:</p>
         <ul>
-            <li>Si se establece un valor, el estilo se aplicara a los cuatro lados.</li>
-            <li>Si se establecen dos valores, el primero se aplica a border-top y border-bottom, la segunda se aplica border-right y border-left.</li>
-            <li>Cuatro valores que aplican a border-top, border-right, border-bottom, border-left, en ese orden.</li>
-            <li>Tres valores: el segundo valor se aplica a border-right y también a border-left.</li>
+            <li>IE 11</li>
+            <li>Firefox 36</li>
+            <li>Chrome 41</li>
+            <li>Safari 8</li>
+            <li>Opera 27</li>
         </ul>
 
-        <h3>Syntax</h3>
+        <h2>Triángulos</h2>
 
-        <div class="syntaxbox">
+        <p>En CSS podemos definir cada uno de los cuatro bordes de un bloque de forma diferente. Se puede aprovechar esta característica para dibujar figuras geométricas, como el triángulo: Por ejemplo, si definimos un borde de una determinada anchura y a los bordes adyacentes (contiguo, cercano, próximo, lindante) le damos la mitad de anchura y un color diferente, obtenemos una forma triangular si al propio contenedor le damos una anchura y altura de cero. Por ejemplo:</p>
+
+        <div class="example">
             <pre>
-        div {
-            border-style: 'style' <span class="coment">/* {1,4} */</span>
+        .triangulo_sup {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #6178B7;
         }
             </pre>
         </div>
 
-        <h3>Estilos</h3>
-        <table>
-            <tbody>
-                <tr>
-                    <td>none</td>
-                    <td>
-                        <div class="example-style none"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>hidden</td>
-                    <td>
-                        <div class="example-style hidden"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dotted</td>
-                    <td>
-                        <div class="example-style dotted"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>dashed</td>
-                    <td>
-                        <div class="example-style dashed"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>solid</td>
-                    <td>
-                        <div class="example-style solid"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>double</td>
-                    <td>
-                        <div class="example-style double"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>groove</td>
-                    <td>
-                        <div class="example-style grove"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ridge</td>
-                    <td>
-                        <div class="example-style ridge"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Inset</td>
-                    <td>
-                        <div class="example-style inset"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>outset</td>
-                    <td>
-                        <div class="example-style ouset"></div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="triangulo_sup"></div>
 
-        <h2>Border-Top</h2>
-        <p>Es una propiedad abreviada que establece los valores de border-top-color, border-top-style y border-top-width. Estas propiedades describen el borde superior de los elementos.</p>
-        <h3>Syntax</h3>
-        <div class="syntaxbox">
+        <div class="example">
             <pre>
-        div {
-            border-top: 'lenght' 'style' 'color';
+        .triangulo_inf {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid #C43056;
         }
             </pre>
         </div>
 
-        <h3>Ejemplo</h3>
+        <div class="triangulo_inf"></div>
 
-        <div class="syntaxbox">
+        <div class="example">
             <pre>
-        .example-8 {
-            border-top: 10px groove black; 
+        .triangulo_izq {
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-right: 100px solid #00BF63;
+            border-bottom: 50px solid transparent;
         }
             </pre>
         </div>
 
-        <div class="example-8"></div>
+        <div class="triangulo_izq"></div>
 
-        <h2>Border-Width</h2>
-        <p>La propiedad border-width establece el ancho del borde de una caja. Usar la propiedad abreviada de border es más conveniente.</p>
-
-        <h3>Syntax</h3>
-
-        <div class="syntaxbox">
+        <div class="example">
             <pre>
-        div {
-            border-width: 'lenght'; <span class="coment">/* {1,4} Keywords: thin | medium | thick</span>
+        .triangulo_der {
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-left: 100px solid #FEE74C;
+            border-bottom: 50px solid transparent;
         }
             </pre>
         </div>
 
-        <h3>Ejemplos</h3>
+        <div class="triangulo_der"></div>
 
-        <div class="syntaxbox">
+        <div class="example">
             <pre>
-        .example-9 {
-            border-width: 10px 8px 6px; 
-        }
-
-        .example-10 {
-            border-width: medium thin thin thick; 
+        .triangulo_top_left {
+            width: 0;
+            height: 0;
+            border-top: 100px solid #FEE74C; 
+            border-right: 100px solid transparent;          
         }
             </pre>
         </div>
 
-        <div class="example-8"></div>
-        <div class="example-9"></div>
+        <div class="triangulo_top_left"></div>
+
+        <div class="example">
+            <pre>
+        .triangulo_top_right {
+            width: 0;
+            height: 0;
+            border-top: 100px solid #00648B; 
+            border-left: 100px solid transparent;          
+        }
+            </pre>
+        </div>
+
+        <div class="triangulo_top_right"></div>
+
+        <div class="example">
+            <pre>
+        .triangulo_bottom_left {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid #1CBB9B; 
+            border-right: 100px solid transparent;          
+        }
+            </pre>
+        </div>
+
+        <div class="triangulo_bottom_left"></div>
+
+        <div class="example">
+            <pre>
+        .triangulo_bottom_right {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid #ED86BD; 
+            border-left: 100px solid transparent;               
+        }
+            </pre>
+        </div>
+
+        <div class="triangulo_bottom_right"></div>
+
+        <div class="example">
+            <pre>
+        .triangulo-tricolor {
+            width: 0; 
+            height: 0; 
+            border-left: 100px solid #428bca;
+            border-top: 50px solid #f0ad4e;
+            border-bottom: 50px solid #d9534f; 
+        }
+            </pre>
+        </div>
+
+        <div class="triangulo-tricolor"></div>
+
+        <p>Lo soporta:</p>
+        <ul>
+            <li>IE 11</li>
+            <li>Firefox 36. Si utilizas Firefox, tenga en cuenta que el valor CSS "transparente" pueden ser no tan transparente, especialmente en los bordes diagonales.</li>
+            <li>Chrome 41.</li>
+            <li>Safari 8</li>
+            <li>Opera 27</li>
+        </ul>
+
+        <h2>Border-Image</h2>
+
+        <p>La propiedad de CSS border-image permite utilizar una imágen para definir los bordes de los elementos.La propiedad border-image es usada en lugar de la sentencia border-style.</p>
+
+        <div class="example">
+            <pre>
+        .border-image { 
+            border: 15px solid transparent;
+            padding: 10px 20px;
+            -moz-border-image:url("/files/4127/border.png") 30 30 repeat; <span>/* Old Firefox */</span>
+            -webkit-border-image:url("/files/4127/border.png") 30 30 repeat;<span>/* Safari */</span> 
+            -o-border-image:url("/files/4127/border.png") 30 30 repeat; <span>/* Opera */</span>
+            border-image:url("/files/4127/border.png") 30 30 repeat;
+        }
+            </pre>
+        </div>
+
+        <div class="border-image"></div>
+
+        <div class="example">
+            <pre>
+        .round{ 
+            border: 15px solid transparent;
+            padding: 10px 20px;
+            -moz-border-image:url("/files/4127/border.png") 30 30 round;<span>/* Old Firefox */</span> 
+            -webkit-border-image:url("/files/4127/border.png") 30 30 round;<span>/* Safari */</span> 
+            -o-border-image:url("/files/4127/border.png") 30 30 round;<span>/* Opera */</span> 
+            border-image:url("/files/4127/border.png") 30 30 round;
+        }
+            </pre>
+        </div>
+
+        <div class="round"></div>
+
+       <div class="example">
+            <pre>
+        .stretch{ 
+                border: 15px solid transparent;
+                padding: 10px 20px;
+                -moz-border-image:url("/files/4127/border.png") 30 30 stretch;<span>/* Old Firefox */</span> 
+                -webkit-border-image:url("/files/4127/border.png") 30 30 stretch;<span>/* Safari */</span> 
+                -o-border-image:url("/files/4127/border.png") 30 30 stretch;<span>/* Opera */</span>         
+                border-image:url("/files/4127/border.png") 30 30 stretch;
+        }
+            </pre>
+        </div>
+
+        <div class="stretch"></div>
+
+        <p>Dato importarte usa <span class="important-word">prefijos.</span></p>
+        <p>existe la opcion round es una variable de <span class="important-word">repeat</span>, la cual distribuye las partes de tal manera que los extremos se conecten bién.</p>
+        <p>La opción <span class="important-word">stretch</span> estira la imágen para rellenar todo el borde del área es variable.</p>
+        <p>Lo soporta: </p>
+        <ul>
+            <li>Firefox 3.5</li>
+            <li>Chrome 7</li>
+            <li>Internet Explorer 11</li>
+            <li>Opera 10.5</li>
+            <li>Safari 3</li>
+        </ul>
+
     </div> <!-- END .content -->
 </body>
 </html>
